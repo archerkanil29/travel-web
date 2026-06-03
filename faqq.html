@@ -1,0 +1,202 @@
+<html>
+<head>
+<style>
+/* Style the header */
+.header {
+background-color: linen;
+padding: 20px;
+
+}
+.btn{
+float:right;
+}
+
+.middle{
+padding:200px;
+text-align:center;
+background-image :url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Marine_Lines_Mumbai_2021.jpg/800px-Marine_Lines_Mumbai_2021.jpg");
+opacity:0.9;
+color:white;
+}
+
+/*-----Adjust the height of wrapper according to your page content-----*/
+.wrapper{
+padding:50px;
+text-align:center;
+width:1225px;
+height:600px;
+border:1px solid black;
+background-color:white;
+opacity:0.9;
+}
+/*-----Nav Bar Style begins----------*/
+
+ul li{
+list-style:none;
+}
+
+.container {
+width: 80%;
+margin: 0 auto;
+}
+
+header {
+background: #55d6aa;
+}
+
+header::after {
+content: '';
+display: table;
+clear: both;
+}
+
+.logo {
+float: left;
+padding: 10px 0;
+}
+
+nav {
+float: left;
+}
+
+nav ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+nav li {
+display: inline-block;
+margin-left: 90px;
+padding-top: 23px;
+
+position: relative;
+}
+
+nav a {
+color: #444;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 14px;
+}
+nav a:hover {
+color: #000;
+}
+
+nav a::before {
+content: '';
+display: block;
+height: 5px;
+background-color: #444;
+position: absolute;
+top: 0;
+width: 0%;
+transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+width: 100%;
+}
+
+/* ------FAQ styling begins ----------*/
+.faqbox{
+background-color:#ABC8C7;
+opacity:0.8;
+border:2px solid #0D0221;
+font-family:"Times New Roman", Times, serif;
+padding:20px;
+color:#0D0221;
+}
+.answer{
+display:none;
+padding: 5px 0px;
+margin-bottom: 15px;
+}
+
+.faq-list-item{
+position:relative;
+margin:10px;
+border-bottom:1px solid #ccc;
+cursor:pointer;
+
+}
+
+.faq-list-item span{
+position:absolute;
+display:inline-block;
+top:15px;
+right:200px;
+font-size:20px;
+}
+/* ------FAQ styling ends----------*/
+
+
+
+</style>
+</head>
+
+<body>
+<div class="header">
+
+</div>
+<header>
+<div class="container">
+<h1 class="logo"></h1>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="hotels.html">Hotels</a></li>
+<li><a href="restruants.html">Restaurants</a></li>
+<li><a href="cnj.html">Contact Us</a></li>
+<li><a href="faqq.html">FAQ</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div class ="wrapper">
+<h1>FAQ</h1>
+<div class="faqbox">
+<ul> <li class='faq-list-item'> <h2>Are there flights available to all over the world from Delhi?</h2> <span>+</span>
+
+<div class='answer'><p> Yes there are a plenty of flights from Delhi to all over the world<p></div> </li>
+
+<li class='faq-list-item'><h2>What is the best season to visit ncr?</h2> <span>+</span>
+
+<div class='answer'> <p>The weather is good year around to visit specially in winter season.</p></div> </li>
+
+<li class='faq-list-item'><h2> Are there highway from delhi to Goa?</h2> <span>+</span>
+
+<div class='answer'><p> Yes there are highway from delhi to Goa</p></div></li>
+</ul>
+</div>
+
+</div>
+<div class="footer"> <p> To know more about ncr visit <a href="https://www.incredibleindia.org/content/incredible-india-v2/en/destinations/delhi">ncr History </a></p> </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(function(){
+
+$('.faq-list-item').click(function(){
+var $answer = $(this).find('.answer');
+
+if($answer.hasClass('open')) {
+$answer.removeClass('open');
+// Use the slideUp() method to hide $answer
+$answer.slideUp();
+// Find the <span> elements inside, then rewrite the content using the text() method
+$(this).find('span').text('+');
+} else {
+$answer.addClass('open');
+// Use the slideDown() method to show $answer
+$answer.slideDown();
+$(this).find('span').text('-');
+// Find the <span> elements inside, then rewrite the content using the text() method
+}
+});
+});
+
+
+</script>
+</body>
+</html>
